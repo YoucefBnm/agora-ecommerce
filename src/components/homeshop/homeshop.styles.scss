@@ -1,0 +1,24 @@
+.homeshop {
+  padding: 4rem 3rem;
+  text-align: center;
+  h2 {
+    margin-bottom: 3rem;
+    
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  a{
+    text-align: center;
+    color: #000;
+    border-color: #000;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

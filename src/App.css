@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;900&display=swap');
+
+:root {
+  --color-light: #fdfdfd;
+  --color-grey: #f0f0f0;
+  --color-dark-1: #40514e;
+  --color-dark-2: #3f3b3b;
+  --color-dark-3: #575151;
+  --color-blue-1: #3d6cb9;
+  --color-blue-2: #00d1ff;
+  --color-red: #CB1F40;
+  --color-purple: #9c1de7;
+  --section-padding: 5rem 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    box-sizing: inherit;
+    font-family: 'Raleway', sans-serif;  
+    font-size: 1.8rem;
+    color: var(--color-dark-2);
+    font-weight: normal;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+.heading-main {
+   font-size: 5rem;
+   margin-bottom: 1.5rem;
+   display: block;
+   font-family: inherit;
+   font-weight: 900;
+   text-transform: uppercase;
+   line-height: 1.4;
+
+}
+.heading-sub {
+  text-shadow: 3px 3px 0 #000, 6px 6px 0 rgb(255 255 255 / 20%);
+  font-size: 3em;
+  line-height: 1;
+  display: block;
+  font-weight: 600;
+  color: var(--color-light);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}    
+
+.text-lead {
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    color: var(--color-grey);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 40% 60%;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-reverse {
+  display: flex;
+  flex: 40% 60%;
+  flex-direction: row-reverse;
 }

@@ -10,12 +10,12 @@ const Card = ({ image, discount, category, name, price }) => (
             <span className="product-category">{category}</span>
         </div>
         <div className='card__body'>
-            <span className="product-name">{name}</span>
+            <h3 className="product-name">{name}</h3>
         </div>
         
         <div className="card__footer">
             <span className='product-price'>
-                <currency>${price}</currency>
+                <currency>${price.toFixed(2)}</currency>
             </span>
             <ShopCart />
         </div>

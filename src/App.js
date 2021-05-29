@@ -1,8 +1,8 @@
+import React from 'react'
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
 import Nav from './components/nav/nav.component'
-import Header from './components/header/header.component'
-import Intro from './components/intro/intro.compontent'
-import HomeShop from './components/homeshop/homeshop.component'
-import Benefits from './components/benefits/benefits.component'
+import HomePage from './pages/homePage/homepage.component'
+import ShopPage from './pages/shopPage/shop.component'
 
 import './App.css';
 
@@ -10,10 +10,12 @@ function App() {
   return (
     <div className="App">
       <Nav />      
-      <Header />
-      <Intro />
-      <HomeShop />
-      <Benefits />
+      <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }

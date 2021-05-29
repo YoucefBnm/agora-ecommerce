@@ -1,6 +1,8 @@
 .homeshop {
   padding: 4rem 3rem;
   text-align: center;
+  // background-color: #f9f9f9;
+  position: relative;
   h2 {
     margin-bottom: 3rem;
     
@@ -9,15 +11,15 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 3rem;
     margin-bottom: 3rem;
   }
   a{
     text-align: center;
-    color: #000;
-    border-color: #000;
+    color: var(--color-blue-1);
+    border-color: var(--color-blue-1);
     &:hover {
-      background-color: #000;
+      background-color: var(--color-blue-1);
       color: #fff;
     }
   }

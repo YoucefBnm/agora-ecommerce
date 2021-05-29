@@ -37,11 +37,13 @@
     &__cart {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         cursor: pointer;
+        padding-right: 2rem;
         svg {
             overflow: hidden;
-            width: 2rem;
-            height: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
             fill: #fff;
             transition: fill 0.2s cubic-bezier(0.65, 0.005, 0.35, 0.995);
             &:hover {

@@ -1,13 +1,18 @@
 import React from 'react'
 import { ReactComponent as ShoppingCart } from '../../assets/shop-cart.svg'
+import { ReactComponent as PersonIcon } from '../../assets/person.svg'
 import Logo from '../../assets/calis-white.png'
 import ShopData from '../homeshop/shop.data'
+import { Link } from 'react-router-dom'
+
 import './nav.styles.scss'
 
 const Nav = () => (
     <nav className='nav'>
         <div className="nav__logo">
-            <img src={Logo} alt="logo"/>    
+            <Link to="/">
+                <img src={Logo} alt="logo"/>   
+            </Link> 
         </div> 
 
         <ul className="nav__list">
@@ -22,6 +27,7 @@ const Nav = () => (
 
         <div className="nav__cart">
             <ShoppingCart />
+            <PersonIcon />
         </div>
     </nav>
 )

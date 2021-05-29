@@ -10,12 +10,10 @@ function App() {
   return (
     <div className="App">
       <Nav />      
-      <BrowserRouter>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
       </Switch>
-      </BrowserRouter>
     </div>
   );
 }

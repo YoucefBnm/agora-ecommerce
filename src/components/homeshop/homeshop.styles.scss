@@ -16,10 +16,10 @@
   }
   a{
     text-align: center;
-    color: var(--color-blue-1);
-    border-color: var(--color-blue-1);
+    color: var(--color-red);
+    border-color: var(--color-red);
     &:hover {
-      background-color: var(--color-blue-1);
+      background-color: var(--color-red);
       color: #fff;
     }
   }

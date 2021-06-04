@@ -1,16 +1,22 @@
 .shoppage {
-
-    &__collection {
-
-        h3{
+    padding: var(--section-padding);
+    padding-top: 13rem;
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+        h2 {
 
         }
     }
+
     &__container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         grid-gap: 3rem;
-        align-items: flex-start;
+        
     }
-    
+}
+nav {
+    background-color: #1a1a1a;
 }

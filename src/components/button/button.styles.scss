@@ -2,7 +2,7 @@
     padding: 1rem 3rem;
     border-radius: 0;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--color-red);
     outline: none;
     line-height: 1.5;
     display: inline-block;
@@ -16,7 +16,7 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:hover {
-        background-color: #fff;
+        background-color: var(--color-red);
         color: #000;
 
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import SHOP_DATA from '../../components/homeshop/shop.data'
 import Card from '../../components/card/card.component'
 import './shop.styles.scss'
+
 class ShopPage extends React.Component {
     constructor(props) {
         super(props)
@@ -12,32 +13,37 @@ class ShopPage extends React.Component {
     }
 
     render() {
-        const { collections } = this.state 
-        return(
-            <div className="shoppage">
+        return (
+            <section className="shoppage">
                 {
-                    collections.map(collection => (
-                        <div className="shoppage__collection">
-                            <h3>{collection.title}</h3>
+                    this.state.collections.map((item, index) => (
+                        <div key={index} className="shoppage__section">
+                            <h2 className="heading-sub">{item.title}</h2>
                             <div className="shoppage__container">
                                 {
-                                    collection.items.map((item, {id}) => (
-                                        <Card   
-                                            key={id}
-                                            image={item.imageUrl}
-                                            category={item.subCategory}
-                                            name={item.name}
-                                            price={item.price}
-                                        />
-                                    ))
+                                    item.items.filter((item, index) => index < 4)
+                                        .map(item => (
+                                            <Card
+                                                key={item.id}
+                                                image={item.imageUrl}
+                                                category={item.subCategory}
+                                                name={item.name}
+                                                price={item.price}
+                                            />
+                                        ))
                                 }
                             </div>
                         </div>
                     ))
                 }
-            </div>
+            </section>
         )
     }
 }
-
+// this.state.collections.map(item => (
+//     item.items.filter((itme, index) => index < 4)
+//     .map(item => (
+//         <div>{item.name}</div>
+//     ))
+// ))
 export default ShopPage

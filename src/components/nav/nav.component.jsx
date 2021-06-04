@@ -17,8 +17,8 @@ const Nav = () => (
 
         <ul className="nav__list">
             {
-                ShopData.map(item => (
-                    <li className="nav__item">
+                ShopData.map((item,index) => (
+                    <li key={index} className="nav__item">
                         <a href={item.routeName} className="nav__link">{item.title}</a>
                     </li>
                 ))

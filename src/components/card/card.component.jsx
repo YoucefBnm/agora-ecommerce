@@ -15,7 +15,7 @@ const Card = ({ image, discount, category, name, price }) => (
         
         <div className="card__footer">
             <span className='product-price'>
-                <currency>${price}</currency>
+                <span>${parseFloat(price).toFixed(2)}</span>
             </span>
             <ShopCart />
         </div>
